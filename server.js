@@ -23,7 +23,7 @@ async function main()
   const MONGO_URL = 'mongodb+srv://wei71717:wei71717@cluster0-vgnav.mongodb.net/test?retryWrites=true&w=majority';
   // The "process.env.MONGODB_URI" is needed to work with Heroku.
   const cli = await MongoClient.connect(process.env.MONGODB_URI || MONGO_URL);
-  const db = cli.database('cs193x-db');
+  const db = cli.db('cs193x-db');
   const diaries = db.collection('diaries');
   const entries = db.collection('entries');
 
